@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/common/" />
+  <Folder Name="/common/code/">
+    <Project Path="common/code/Otchitta.Person.Libraries.Common.Code.csproj" />
+  </Folder>
+  <Folder Name="/common/test/">
+    <Project Path="common/test/Otchitta.Person.Libraries.Common.Test.csproj" />
+  </Folder>
+</Solution>
