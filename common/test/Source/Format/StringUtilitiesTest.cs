@@ -38,9 +38,11 @@ public class StringUtilitiesTest {
 		public void TestToStringA() {
 			using (Assert.EnterMultipleScope()) {
 				Assert.That(StringUtilities.ToString(null), Is.EqualTo("NULL"));
-				Assert.That(StringUtilities.ToString(1234), Is.EqualTo("(System.Int32)1234"));
+				Assert.That(StringUtilities.ToString(1234), Is.EqualTo("1234"));
 				Assert.That(StringUtilities.ToString(new()), Is.EqualTo("(System.Object)System.Object"));
 				Assert.That(StringUtilities.ToString(New()), Is.EqualTo("(Otchitta.Libraries.String.Format.StringUtilitiesTest+ToStringTest)NULL"));
+
+				Assert.That(StringUtilities.ToString(new Exception("S")), Is.EqualTo("(System.Exception)System.Exception: S"));
 			}
 		}
 		#endregion 検証メソッド定義

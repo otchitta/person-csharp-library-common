@@ -12,6 +12,8 @@ public static class StringUtilities {
 	public static string ToString(object? source) {
 		if (source == null) {
 			return "NULL";
+		} else if (AtomicUtilities.ToString(source, out var phaseA)) {
+			return phaseA;
 		} else {
 			var value1 = source.GetType().FullName;
 			var value2 = source.ToString() ?? "NULL";
