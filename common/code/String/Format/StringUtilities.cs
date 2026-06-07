@@ -10,14 +10,6 @@ public static class StringUtilities {
 	/// <param name="source">要素情報</param>
 	/// <returns>変換情報</returns>
 	public static string ToString(object? source) {
-		if (source == null) {
-			return "NULL";
-		} else if (AtomicUtilities.ToString(source, out var phaseA)) {
-			return phaseA;
-		} else {
-			var value1 = source.GetType().FullName;
-			var value2 = source.ToString() ?? "NULL";
-			return $"({value1}){value2}";
-		}
+		return ObjectUtilities.ToString(source);
 	}
 }
